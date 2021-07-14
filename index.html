@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicacion de productos</title>
+    <!-- estilo con bootstrap cdn con bootswatch -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
+
+    <link rel="stylesheet" href="App.css">
+
+</head>
+<body>
+
+    <!-- Navegacion -->
+    <nav class=" navbar navbar-secondary bg-secondary">
+        <a class="navbar-brand" href="#">
+        APLICACION DE PRODUCTOS
+        </a>
+
+    </nav>
+    <!-- container es para que todo el contenido este centrado -->
+     <div class="container"> 
+         <!-- dentro de este contenedor se crea la aplicacion -->
+         <div id="App" class="row pt-5">
+             <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Agregue un Producto</h4>
+                    </div>
+                    <form id="product-form" class="card-body">
+                        <div class="form-group">
+                            <!-- con esto se estiliza con boostrap form-group y form-control -->
+                            <input type="text" id="name" placeholder="Nombre Producto" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" id="price" step="0.01" placeholder="Precio Producto" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" id="year" min="1900" max="2021" step="1" value="2018" placeholder="Año del Producto" class="form-control">
+                        </div>
+                        <input type="submit" value="Guardar" class="btn btn-primary btn-block">
+                    </form>
+                </div>
+             </div>
+             <!-- lista de productos -->
+             <div id="product-list" class="col-md-8"></div>
+         </div>
+
+    </div>
+    <script src="App.js"></script>
+</body>
+</html>
